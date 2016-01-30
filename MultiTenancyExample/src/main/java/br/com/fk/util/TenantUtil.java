@@ -2,7 +2,7 @@ package br.com.fk.util;
 
 public class TenantUtil {
 	
-	private static String tenant = "";
+	private static String tenant = "public";
 	
 	private TenantUtil() {
 		
