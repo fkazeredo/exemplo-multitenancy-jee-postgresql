@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="fk-dev" transaction-type="JTA">
+		<description>Multi Tenancy Persistence Unit</description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/multitenancyDS</jta-data-source>
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.multiTenancy" value="SCHEMA" />
+			<property name="hibernate.tenant_identifier_resolver" value="br.com.fk.util.SchemaResolver" />
+			<property name="hibernate.multi_tenant_connection_provider"
+				value="br.com.fk.util.MultiTenantProvider" />
+		</properties>
+	</persistence-unit>
+</persistence>
