@@ -18,3 +18,6 @@ Clique no projeto com o botão direito, vá em “build path”, na aba “Libra
 
 #5  - Rode o projeto
 Segue os links dos serviços: 
+- http://localhost:8080/MultiTenancyExample/api/schema1teste
+- http://localhost:8080/MultiTenancyExample/api/schema2teste
+- http://localhost:8080/MultiTenancyExample/api/transacaoteste
